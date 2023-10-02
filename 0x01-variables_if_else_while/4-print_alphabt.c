@@ -3,18 +3,23 @@
  *  * main - entry point
  *   *
  *    * Return: always 0 (success)
- *     */
+ */
 int main(void)
 {
-	char alphabets;
-	for (alphabets = 'a'; alphabets <= 'z'; alphabets++)
+	char lower_case;
+
+	for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
 	{
-		if (alphabets == 'q')
+		if (lower_case == 'e')
+		{
 			continue;
-		else if (alphabets == 'e')
+		}
+		else if (lower_case == 'q')
+		{
 			continue;
-		putchar(alphabets);
+		}
+		putchar(lower_case);
 	}
-	putchar('\n');
-	return (0);
+		putchar('\n');
+		return (0);
 }
