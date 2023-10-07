@@ -3,30 +3,29 @@
  *  * main - entry point
  *   *
  *    * Return: Always 0 (Success/correct)
- *     */
+ */
 int main(void)
 {
 	int i, j, k;
-	for (i = 48; i < 58; i++)
+
+	for (i = 48; i <= 57; i++)
 	{
-		for (j = 49; j < 58; j++)
+		for (j = i + 1; j <= 57; j++)
 		{
-			for (k = 50; k < 58; k++)
+			for (k = j + 1; k <= 57; k++)
 			{
-				if (k > j && j > i)
+				putchar(i);
+				putchar(j);
+				putchar(k);
+				if (i == 55 && j == 56 && k == 57)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (i != 55 || j != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					continue;
 				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
+				putchar('\n');
+				return (0);
 }
